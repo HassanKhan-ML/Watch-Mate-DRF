@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from watchlist_app.models import Movie
 from watchlist_app.api.serializers import MovieSerializers
 
-@api_view(['GET','POST'])
+@api_view(['GET','POST'])          # Empty default request is get
 def movie_list(request):
   if request.method == "GET":
     movies =  Movie.objects.all()
